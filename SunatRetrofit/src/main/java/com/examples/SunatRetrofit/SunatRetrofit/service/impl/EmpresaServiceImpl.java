@@ -32,7 +32,7 @@ public class EmpresaServiceImpl implements EmpresaService {
     @Override
     public ResponseSunat getInfoEmpresa(String ruc) throws IOException {
         ResponseSunat responseSunat = new ResponseSunat();
-        //logica del diagrama
+        //logica del diagrama redis
         //recupero la informacion de Redis
         String sunatRedisInfo = redisService.getDataFromRedis(Constants.REDIS_KEY_API_SUNAT+ruc);
         //validando que la info exista
