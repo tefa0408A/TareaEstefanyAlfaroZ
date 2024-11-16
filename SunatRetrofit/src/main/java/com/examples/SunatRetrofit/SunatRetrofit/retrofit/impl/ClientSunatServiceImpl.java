@@ -1,11 +1,11 @@
 package com.examples.SunatRetrofit.SunatRetrofit.retrofit.impl;
 
-import com.examples.SunatRetrofit.SunatRetrofit.aggregates.constants.Constants;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import static com.examples.SunatRetrofit.SunatRetrofit.aggregates.constants.Constants.BASE_URL;
+
 public class ClientSunatServiceImpl {
-    private static String BASE_URL= Constants.BASE_URL;
     private static Retrofit retrofit = null;
 
     public static Retrofit getRetrofit(){

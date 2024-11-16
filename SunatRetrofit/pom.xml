@@ -13,7 +13,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>SunatRetrofit</name>
 	<description>Proyecto de consulta a una API externa con retrofit</description>
-	<url/>
+	<!--url/-->
 	<licenses>
 		<license/>
 	</licenses>
@@ -50,11 +50,13 @@
 			<optional>true</optional>
 		</dependency>
 		<dependency>
+			<!--Dependencia para agregar a retrofit al proyecto-->
 			<groupId>com.squareup.retrofit2</groupId>
 			<artifactId>retrofit</artifactId>
 			<version>2.9.0</version>
 		</dependency>
 		<dependency>
+			<!--Dependencia para agregar un traductor de json a clases java-->
 			<groupId>com.squareup.retrofit2</groupId>
 			<artifactId>converter-gson</artifactId>
 			<version>2.9.0</version>

@@ -6,6 +6,10 @@ import org.springframework.stereotype.Service;
 import java.util.concurrent.TimeUnit;
 
 @Service
+//permite crear un constructor para la inyeccion
+//@RequiredArgsConstructor - generar un constructor que incluye todos los atributos definidos como final
+//@NoArgsConstructor - genera un constructor sin argumentos
+//@AllArgsConstructor- genera un constructor que incluye todos los campos de la clase
 public class RedisService {
     private final StringRedisTemplate redisTemplate;
 
@@ -22,7 +26,4 @@ public class RedisService {
         return redisTemplate.opsForValue().get(key);
     }
 
-    public void deleteDataRedis(String key){
-        redisTemplate.delete(key);
-    }
 }

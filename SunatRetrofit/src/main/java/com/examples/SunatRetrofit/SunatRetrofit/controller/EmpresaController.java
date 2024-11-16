@@ -1,13 +1,10 @@
 package com.examples.SunatRetrofit.SunatRetrofit.controller;
 
-import com.examples.SunatRetrofit.SunatRetrofit.entity.EmpresaEntity;
+import com.examples.SunatRetrofit.SunatRetrofit.aggregates.response.ResponseSunat;
 import com.examples.SunatRetrofit.SunatRetrofit.service.EmpresaService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 
@@ -21,8 +18,8 @@ public class EmpresaController {
         this.empresaService = empresaService;
     }
 
-    @GetMapping("sunat/{ruc}")
-    public ResponseEntity<EmpresaEntity> getInfoSunat(@PathVariable String ruc) throws IOException {
+    @GetMapping("/sunat")
+    public ResponseEntity<ResponseSunat> getInfoSunat(@RequestParam("ruc") String ruc) throws IOException {
         return new ResponseEntity<>(empresaService.getInfoEmpresa(ruc),HttpStatus.OK);
     }
 }
